@@ -1,0 +1,150 @@
+
+/* BREAKPOINT 1 — 980px | Tablet Landscape */
+
+/* BREAKPOINT 2 — 890px  */
+
+/* BREAKPOINT 3 — 768px | Tablet Portrait */
+
+/* BREAKPOINT 4 — 520px | Mobile */
+
+
+
+/* BREAKPOINT 1 -980px (Tablet Landscape) */
+
+@media (max-width:980px) {
+
+  .grid {
+    grid-template-columns: 1fr 1fr;  
+  }
+
+  .pricing-card,
+  .pricing-card.popular {
+    transform: scale(1);
+  }
+
+
+  .testimonial-card:last-child,
+  .pricing-card:last-child {
+    grid-column: span 2;
+  width: 50%;
+  margin: 0 auto;
+  }
+
+}
+
+/* BREAKPOINT 2 — 890px (Tablet) */
+
+@media (max-width: 890px) {
+  .navbar-cta {
+    display: none;
+  }
+
+  .navbar-links {
+    flex: none;
+    gap: var(--space-lg);
+  }
+}
+
+/* BREAKPOINT 3 — 768px (Tablet Portrait) */
+
+
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+
+
+.navbar-links {
+  flex: unset;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+
+  padding-block: 0;
+  background: var(--bg-primary);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+   max-height: 0;
+  overflow: hidden;
+
+  transition: max-height 0.8s ease;
+}
+
+.nav-link {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+   padding: var(--space-sm) 0;
+}
+
+.navbar-links.active {
+  max-height: 300px;
+  padding-block: var(--space-sm);
+}
+
+ .navbar-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+
+.navbar-toggle.active span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.navbar-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card,
+  .pricing-card,
+  .testimonial-card {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .testimonial-card:last-child,
+  .pricing-card:last-child {
+    grid-column: auto;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* BREAKPOINT 4 — 520px (Mobile) */
+
+@media (max-width: 520px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+    text-align: center;
+  }
+
+  .feature-card,
+  .pricing-card,
+  .testimonial-card {
+    width: 100%;
+  }
+
+  .testimonial-card:last-child,
+  .pricing-card:last-child {
+    grid-column: auto;
+    width: 100%;
+  }
+}
