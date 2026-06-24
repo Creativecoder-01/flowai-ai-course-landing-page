@@ -5,6 +5,9 @@ A modern and responsive landing page for an AI productivity course, built with H
 
 ## Live Demo
 
+[View Live Demo] 
+https://creativecoder-01.github.io/flowai-ai-course-landing-page/
+
 ## Technologies Used
 
 - HTML5
